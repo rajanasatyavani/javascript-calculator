@@ -1,0 +1,77 @@
+
+<html >
+    <head>
+       
+        <title>CALCULATOR</title>
+        <script type="text/javascript">
+            function get_value(e){
+                if(e=='c'){
+                    calc.display.value=""  
+                }
+                else if(e=='='){
+                    calc.display.value=eval(calc.display.value)
+                }
+                else{
+                    calc.display.value+=e
+                }
+    
+            }
+        </script>
+    <style>
+        td{
+            text-align: center;
+        }
+        input{
+            color:red;
+            font-size: 15px;
+        }
+        .display{
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: blue;
+            height: 50px;
+            
+        }
+    </style>
+    
+    </head>
+    <body>
+        <center>
+            <form name="calc">
+                <table border="1">
+                    <tr>
+                        <td colspan="4" >
+                            <input type="text" name="display" class="display">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="1" onclick="get_value(1)"></td>
+                        <td><input type="button" value="2" onclick="get_value(2)"></td>
+                        <td><input type="button" value="3" onclick="get_value(3)"></td>
+                        <td><input type="button" value="+" onclick="get_value('+')"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="4" onclick="get_value(4)"></td>
+                        <td><input type="button" value="5" onclick="get_value(5)"></td>
+                        <td><input type="button" value="6" onclick="get_value(6)"></td>
+                        <td><input type="button" value="-" onclick="get_value('-')"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="7" onclick="get_value(7)"></td>
+                        <td><input type="button" value="8" onclick="get_value(8)"></td>
+                        <td><input type="button" value="9" onclick="get_value(9)"></td>
+                        <td><input type="button" value="*" onclick="get_value('*')"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="/" onclick="get_value('/')"></td>
+                        <td><input type="button" value="0" onclick="get_value(0)"></td>
+                        <td><input type="button" value="clr" onclick="get_value('c')"></td>
+                        <td><input type="button" value="=" onclick="get_value('=')"></td>
+                    </tr>
+                    
+                </table>
+            </form>
+        </center>
+    </body>
+    </html>
